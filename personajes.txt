@@ -1,15 +1,15 @@
-Butters,90,15,12,imagenes/ButtersStotch.png
-Cartman,120,18,15,imagenes/EricCartman.png
-Kenny,80,20,8,imagenes/KennyMcCormick.png
-Kyle,100,18,14,imagenes/KyleBroflovski.png
-Stan,105,17,15,imagenes/StanMarsh.png
-Triple T,200,30,25,imagenes/TripleT.png
-Cleveland,130,15,20,imagenes/Cleveland_Brown.png
-Mordecai,110,19,13,imagenes/Mordecai.png
-Rigby,85,17,10,imagenes/Rigby.png
-Papaleta,150,25,20,imagenes/Papaleta.png
-Stewie,95,28,10,imagenes/Stewie_Griffin.png
-Chris,100,16,14,imagenes/Chris_Griffin.png
-Lois Griffin,105,18,16,imagenes/Lois.png
-Peter Griffin,140,20,18,imagenes/Peter_Griffin.png
-Meg,75,12,10,imagenes/Meg_Griffin.png
+Butters,70,22,8,imagenes/ButtersStotch.png
+Cartman,90,25,10,imagenes/EricCartman.png
+Kenny,65,28,5,imagenes/KennyMcCormick.png
+Kyle,80,24,9,imagenes/KyleBroflovski.png
+Stan,85,22,10,imagenes/StanMarsh.png
+Triple T,150,35,15,imagenes/TripleT.png
+Cleveland,100,20,12,imagenes/Cleveland_Brown.png
+Mordecai,85,26,8,imagenes/Mordecai.png
+Rigby,70,24,6,imagenes/Rigby.png
+Papaleta,110,30,12,imagenes/Papaleta.png
+Stewie,75,32,6,imagenes/Stewie_Griffin.png
+Chris,80,22,9,imagenes/Chris_Griffin.png
+Lois Griffin,85,24,10,imagenes/Lois.png
+Peter Griffin,110,26,12,imagenes/Peter_Griffin.png
+Meg,60,18,6,imagenes/Meg_Griffin.png
