@@ -197,9 +197,21 @@ def pantalla_mapa(nombre_usuario, datos_usuario):
 def ir_a_hollow(nombre_usuario, datos_usuario, indice_hollow): #cuando un usuario selecciona una ubi del mapa
     #ademas prepara a los personajes de cada hollow(diferentes a los del jugador)
    todos = cargar_personajes() #carga todos los personajes disponibles desde el archivo, el resultado se guarda en la variable todos
-   nombres_jugador = datos_usuario["personajes"] #obtiene los nombres de los personajes seleccionados por el usuario, el resultado se guarda en la variable nombres_jugador
-   disponibles = [p for p in todos if p ["nombre"] not in nombres_jugador] #filtra los personajes que no fueron seleccionados por el usuario para usarlos como enemigos en el hollow, el resultado se guarda en la variable disponibles
-   personajes_hollow = random.sample(disponibles, 3) #elige 3 personajes aleatorios de la lista de disponibles para el hollow, el resultado se guarda en la variable personajes_hollow
+   nombres_jugador = datos_usuario["personajes"]  # ← sube aquí arriba
+   #obtiene los nombres de los personajes seleccionados por el usuario, el resultado se guarda en la variable nombres_jugador
+   
+   #Ahora excluye a todos los personajes que el jugadorya tiene desbloqueados
+   progreso = cargar_progreso()
+   todos_desbloqueados = progreso[nombre_usuario].get("personajes_desbloqueados", [])
+   disponibles = [p for p in todos if p["nombre"] not in todos_desbloqueados]
+   # Si no hay suficientes personajes disponibles, usamos todos los que quedan
+   if len(disponibles) < 3:
+       disponibles = [p for p in todos if p["nombre"] not in nombres_jugador]
+   # Si aun asi no hay 3, usamos todos
+   if len(disponibles) < 3:
+       disponibles = todos
+
+   personajes_hollow = random.sample(disponibles, min(3, len(disponibles)))
    personajes_usuario = [p for p in todos if p["nombre"] in nombres_jugador] # p for p recorre cada personaje en la lista de todos, if p["nombre"] in nombres_jugador verifica si el nombre del personaje esta en la lista de nombres del jugador, el resultado se guarda en la variable personajes_usuario
    for p in personajes_usuario: # restaura vida de los personajes
        p["vida"] = p["vida_max"]
